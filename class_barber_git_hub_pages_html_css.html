@@ -1,0 +1,189 @@
+<!--
+Class Barber - Single Page Website (HTML + CSS)
+Created for GitHub Pages (static, always-on)
+Theme: Green (#4C7445), Cream (#F6F0E1), Gold (#D4AF37)
+Placeholder images are used from Unsplash and can be replaced in /assets/ folder.
+
+Files:
+- index.html  (this file)
+- assets/ (optional) - add your own images here and update <img> src accordingly
+
+Deployment (quick):
+1. Create a new GitHub repository (e.g. classbarber38.github.io or any name).
+2. Upload index.html to the repository root.
+3. On GitHub, go to Settings -> Pages -> Deploy from branch -> select 'main' (or 'master') and root (/).
+4. Wait a minute — your site will be live at https://<your-username>.github.io/<repo-name>/ (or https://<your-username>.github.io if repo named username.github.io).
+
+Editing later: simply edit index.html in the repo and commit changes — GitHub Pages will auto-deploy.
+
+Replaceable fields (search inside file): PHONE_NUMBER, MAP_LINK, FACEBOOK_LINK, OWNER_NAME
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Class Barber • Plymouth</title>
+  <meta name="description" content="Class Barber - Professional men's haircuts, skin fades, beard shape-up, hot towel shave. 38 North Hill, Plymouth.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --green:#4C7445;
+      --cream:#F6F0E1;
+      --gold:#D4AF37;
+      --dark:#2b2b2b;
+      --max-width:1100px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Montserrat,system-ui,Arial,sans-serif;margin:0;color:var(--dark);background:linear-gradient(180deg,var(--cream) 0%, #fff 100%)}
+    .container{max-width:var(--max-width);margin:0 auto;padding:20px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{background:var(--green);color:var(--cream);padding:8px 14px;border-radius:6px;display:inline-block;font-family:Playfair Display,serif;font-size:22px;letter-spacing:2px}
+    .tag{font-size:12px;color:#555}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:center;margin:18px 0}
+    .hero-card{background:linear-gradient(180deg,#ffffff 0%,var(--cream) 100%);padding:28px;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,0.08)}
+    .hero h1{margin:0 0 8px;font-family:Playfair Display,serif;font-size:34px;color:var(--green)}
+    .hero p{margin:0 0 16px;color:#333}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:12px 16px;border-radius:8px;text-decoration:none;font-weight:700}
+    .btn-primary{background:var(--dark);color:#fff}
+    .btn-ghost{background:transparent;border:2px solid var(--dark);color:var(--dark)}
+
+    /* Info card */
+    .info{background:var(--green);color:var(--cream);padding:18px;border-radius:10px;text-align:center}
+    .info h3{margin:0;font-size:20px}
+    .info p{margin:6px 0 0;font-size:14px}
+
+    /* Services */
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:20px 0}
+    .service{background:#fff;padding:16px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06)}
+    .service h4{margin:0 0 8px}
+    .service p{margin:0;color:#666;font-size:14px}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:20px 0}
+    .gallery img{width:100%;height:120px;object-fit:cover;border-radius:6px}
+
+    /* Reviews & contact */
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
+    .reviews{background:#fff;padding:16px;border-radius:8px}
+    .review{border-left:4px solid var(--gold);padding:8px 12px;margin-bottom:10px}
+    .contact{background:linear-gradient(180deg,var(--cream),#fff);padding:16px;border-radius:8px}
+    .contact a{display:inline-block;margin-top:8px}
+
+    footer{margin:20px 0;text-align:center;color:#555;font-size:13px}
+
+    /* Responsive */
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .two-col{grid-template-columns:1fr}
+    }
+    @media(max-width:520px){
+      .gallery img{height:100px}
+      .logo{font-size:18px}
+      .hero h1{font-size:28px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">CLASS<br>BARBER</div>
+        <div>
+          <div class="tag">Professional Service • 38 North Hill, Plymouth</div>
+          <div style="font-size:12px;color:#666;margin-top:4px">100% recommend (12 Reviews)</div>
+        </div>
+      </div>
+      <div style="text-align:right">
+        <div style="font-weight:700">Call Sam</div>
+        <div style="margin-top:6px;font-size:14px"><a class="btn btn-primary" href="tel:+447899772323">07899 772323</a></div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Your Style, Our Skill</h1>
+        <p>Fully qualified barbers specialising in men's haircuts, skin fades, hot towel shaves, beard shaping and kids' cuts. Friendly service and professional finish.</p>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="tel:+447899772323">Call Sam</a>
+          <a class="btn btn-ghost" href="https://maps.app.goo.gl/aQ2LMBBqchMVTLkMA" target="_blank" rel="noopener">Get Directions</a>
+          <a class="btn" style="background:var(--gold);color:#fff;text-decoration:none" href="https://www.facebook.com/classbarber38" target="_blank" rel="noopener">Facebook</a>
+        </div>
+
+        <div style="margin-top:18px;color:#444;font-size:14px">
+          <strong>Address:</strong> 38 North Hill, Plymouth PL4 8ET<br>
+          <strong>Open:</strong> Closed now
+        </div>
+      </div>
+
+      <aside class="info">
+        <h3>Book a Cut</h3>
+        <p style="margin-top:8px;font-size:14px">Call or message Sam to book your appointment.</p>
+        <p style="margin-top:10px;font-size:16px;font-weight:700">07899 772323</p>
+      </aside>
+    </section>
+
+    <section>
+      <h2 style="color:var(--green);margin-bottom:10px">Services</h2>
+      <div class="services">
+        <div class="service"><h4>Men's Haircut</h4><p>Classic and modern styles tailored to you.</p></div>
+        <div class="service"><h4>Skin Fade</h4><p>Sharp lines and clean fades for a professional finish.</p></div>
+        <div class="service"><h4>Hot Towel Shave</h4><p>Traditional hot towel shaves for a smooth result.</p></div>
+        <div class="service"><h4>Beard Shape-Up</h4><p>Precision beard trimming and styling.</p></div>
+        <div class="service"><h4>Kids' Cuts</h4><p>Friendly and patient service for young clients.</p></div>
+        <div class="service"><h4>Hair Design</h4><p>Custom designs to express yourself.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2 style="color:var(--green);margin-bottom:10px">Gallery</h2>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=60" alt="barber image 1">
+        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=60" alt="barber image 2">
+        <img src="https://images.unsplash.com/photo-1583511655785-d9a3b2f2c5c6?auto=format&fit=crop&w=800&q=60" alt="barber image 3">
+      </div>
+    </section>
+
+    <section class="two-col">
+      <div class="reviews">
+        <h3 style="margin-top:0;color:var(--green)">What people say</h3>
+        <div class="review"><strong>Ben Lucas</strong><div style="font-size:13px;margin-top:6px">Great place and friendly 🙂</div></div>
+        <div class="review"><strong>Razvan Besleaga</strong><div style="font-size:13px;margin-top:6px">Mr H. Best barber in town. 5 stars barber shop.</div></div>
+        <div class="review"><strong>Lisa Tippet</strong><div style="font-size:13px;margin-top:6px">My son always goes to Sam for his hair — very happy with the service.</div></div>
+      </div>
+
+      <div class="contact">
+        <h3 style="margin-top:0;color:var(--green)">Contact & Location</h3>
+        <p style="margin:0;font-size:14px">38 North Hill, Plymouth PL4 8ET</p>
+        <p style="margin:4px 0 0;font-size:14px">Phone: <a href="tel:+447899772323">07899 772323</a></p>
+        <p style="margin:4px 0 0;font-size:14px">Email: <a href="mailto:classbarber38@yahoo.com">classbarber38@yahoo.com</a></p>
+        <a class="btn btn-ghost" href="https://maps.app.goo.gl/aQ2LMBBqchMVTLkMA" target="_blank" rel="noopener">Open in Google Maps</a>
+
+        <div style="margin-top:12px">
+          <iframe
+            src="https://www.google.com/maps?q=38+North+Hill+Plymouth+PL4+8ET&output=embed"
+            width="100%" height="220" style="border:0;border-radius:8px" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <div style="margin-top:12px">Find us on <a href="https://www.facebook.com/classbarber38" target="_blank" rel="noopener">Facebook</a></div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© 2025 Class Barber</div>
+      <div>Created by AT</div>
+    </footer>
+  </div>
+</body>
+</html>
